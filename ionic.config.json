@@ -1,0 +1,7 @@
+{
+  "name": "Application_3-1_practica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
