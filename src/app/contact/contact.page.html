@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="fixed">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" placeholder="..."></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Número</ion-label>
+    <ion-input [(ngModel)]="numero" placeholder="..."></ion-input>
+  </ion-item>
+
+  <section>
+    <ion-button (click)='guardar()' expand="block">Guardar</ion-button>
+    <ion-button (click)='navegar()' expand="block">Listar</ion-button>
+  </section>
+
+</ion-content>
