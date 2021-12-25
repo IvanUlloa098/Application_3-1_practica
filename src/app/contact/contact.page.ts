@@ -24,16 +24,16 @@ export class ContactPage implements OnInit {
   async guardar() {
     if(this.nombre && this.numero){
       this.contacto.nombre = this.nombre
-    this.contacto.numero = this.numero
-    
-    this.apiService.saveContact(this.contacto).subscribe(data => {})
+      this.contacto.numero = this.numero
+      
+      this.apiService.saveContact(this.contacto).subscribe(data => {})
 
-    const alert = await alertController.create({
-      header: 'Alerta',
-      message: 'Datos guardados',
-      buttons: ['OK']
-    });
-    await alert.present();
+      const alert = await alertController.create({
+        header: 'Alerta',
+        message: 'Datos guardados',
+        buttons: ['OK']
+      });
+      await alert.present();
 
     } else {
       const alert = await alertController.create({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
 
-  constructor() { }
+  public contacts : any
 
-  ngOnInit() {
+  constructor(private apiService: ApiService) { }
+
+  async ngOnInit() {
+    this.contacts = await this.apiService.listContacts()
   }
 
 }

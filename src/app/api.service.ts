@@ -25,4 +25,9 @@ export class ApiService {
 
   }
 
+  listContacts() {
+    
+    return this.http.get<any>(environment.WS_PATH + "/listarcontactos/").toPromise()
+  }
+
 }
